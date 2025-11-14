@@ -1,11 +1,11 @@
 // ------------------ PRODUCTS & CART ------------------
     const products = [
-      { id:'p1', title:'Dumbbell', price:999, img:'https://images.unsplash.com/photo-1599058917214-1c9b9f3b3fc8?q=80&w=800&auto=format&fit=crop' },
-      { id:'p2', title:'Boxing Bag', price:1999, img:'https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=800&auto=format&fit=crop' },
-      { id:'p3', title:'Gym Gloves', price:499, img:'https://images.unsplash.com/photo-1594737625785-8f855d36e0b8?q=80&w=800&auto=format&fit=crop' },
-      { id:'p4', title:'Exercise Ball', price:799, img:'https://images.unsplash.com/photo-1582719478250-3a0b4e0d3a7e?q=80&w=800&auto=format&fit=crop' },
-      { id:'p5', title:'Treadmill', price:24999, img:'https://images.unsplash.com/photo-1571019613914-85f342c6e3b0?q=80&w=800&auto=format&fit=crop' },
-      { id:'p6', title:'Kettlebell', price:1299, img:'https://images.unsplash.com/photo-1558611848-73f7eb4001d4?q=80&w=800&auto=format&fit=crop' },
+      { id:'p1', title:'Dumbbell', price:999, img:'../Assets/Images/Dumbbell.jpg' },
+      { id:'p2', title:'Boxing Bag', price:1999, img:'../Assets/Images/Boxing Bag.jpg' },
+      { id:'p3', title:'Gym Gloves', price:499, img:'../Assets/Images/gloves.jpeg' },
+      { id:'p4', title:'Exercise Ball', price:799, img:'../Assets/Images/Exercise Ball.jpg'},
+      { id:'p5', title:'Treadmill', price:24999, img:'../Assets/Images/tredmill.jpeg' },
+      { id:'p6', title:'Kettlebell', price:1299, img:'../Assets/Images/Kettlebell.jpg' },
     ];
 
     const shopGrid = document.getElementById('shopGrid');
@@ -144,3 +144,4 @@
         }
       });
     });
+    

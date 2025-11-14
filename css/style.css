@@ -117,3 +117,11 @@
 .neon {
   text-shadow: 0 0 20px rgba(150,255,120,0.5);
 }
+  @keyframes slideSlow {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  .animate-slideSlow {
+    animation: slideSlow 25s linear infinite;
+  }
