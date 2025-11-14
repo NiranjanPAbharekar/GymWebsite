@@ -111,7 +111,36 @@
       setTimeout(()=>{ contactStatus.textContent = 'Message sent — we will contact you soon!'; contactForm.reset(); }, 900);
     });
 
-    // small responsive redraw for chart
-    window.addEventListener('resize', ()=>{ canvas.width = canvas.clientWidth; canvas.height = 320; drawChart(); });
-    // set canvas initial width to match container
-    canvas.width = canvas.clientWidth; canvas.height = 320; drawChart();
+ 
+
+     (function(){
+      const dumb = document.getElementById('parallaxDumbbell');
+      if(!dumb) return;
+
+      let lastScroll = window.scrollY;
+      let offset = 0;
+
+      function onScroll() { lastScroll = window.scrollY; }
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      function tick(){
+        // translate factor (smaller so it's subtle)
+        const target = lastScroll * 0.12;
+        offset += (target - offset) * 0.08; // ease
+        // parallax vertical movement and slight rotate
+        dumb.style.transform = `translateY(${ -offset }px) rotate(${ Math.sin(offset/40) * 4 }deg)`;
+        requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    })();
+
+    // Smooth scroll for internal links (improves UX)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const href = this.getAttribute('href');
+        if(href.length > 1){
+          e.preventDefault();
+          document.querySelector(href)?.scrollIntoView({behavior:'smooth', block:'start'});
+        }
+      });
+    });

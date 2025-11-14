@@ -1,3 +1,119 @@
- .neon-text { text-shadow: 0 2px 0 rgba(0,0,0,.6), 0 6px 24px rgba(34,197,94,.06); }
-    .neon-border { box-shadow: 0 6px 28px rgba(34,197,94,.06), inset 0 0 30px rgba(34,197,94,.02); }
-    .card-hover:hover { transform: translateY(-10px); box-shadow: 0 28px 48px rgba(2,6,23,0.6); }
+ :root{
+      --accent1: #b7ff7a;
+        --accent2: #56ff47;
+      --dark-1: #071026;
+      --glass: rgba(255,255,255,0.04);
+    }
+    body { background: linear-gradient(180deg, #04121b 0%, #07182a 60%); font-family: Inter, system-ui, sans-serif; }
+
+    .hero {
+      position: relative;
+   
+      min-height: 530px;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+
+
+    /* background image / ken burns */
+    .hero-bg {
+      position:absolute; inset:0; z-index:0;
+      background-image: url('./Assets/Images/banner.jpg');
+      background-size: cover; background-position: center;
+      transform-origin: center;
+      animation: kenburns 18s ease-in-out infinite alternate;
+      will-change: transform;
+      filter: saturate(1.03) contrast(1.03) brightness(.85);
+    }
+    @keyframes kenburns {
+      0%{ transform: scale(1) translateY(0); }
+      100%{ transform: scale(1.12) translateY(18px); }
+    }
+
+ 
+
+    /* floating neon heading */
+    .neon {
+      font-weight: 800;
+      background: linear-gradient(90deg,var(--accent1),var(--accent2));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      text-shadow: 0 6px 30px rgba(86,255,71,0.08);
+      animation: floatText 4s ease-in-out infinite;
+    }
+    @keyframes floatText {
+      0%,100%{ transform: translateY(0); text-shadow: 0 8px 40px rgba(86,255,71,.08); }
+      50%{ transform: translateY(-10px); text-shadow: 0 18px 60px rgba(86,255,71,.2); }
+    }
+
+    /* glass card */
+    .glass {
+      background: rgba(8,19,32,0.48);
+      border: 1px solid rgba(255,255,255,0.04);
+      backdrop-filter: blur(8px) saturate(1.1);
+      padding: 1.25rem;
+      border-radius: 14px;
+      box-shadow: 0 10px 40px rgba(2,6,23,0.6);
+    }
+
+    /* parallax dumbbell */
+    .dumbbell {
+      position:absolute;
+      
+      width:40px;
+      height:40px;
+      z-index:6;
+      transform-origin:center;
+      will-change: transform;
+      transition: transform .12s linear;
+      filter: drop-shadow(0 20px 40px rgba(4,8,12,0.6));
+      pointer-events:none;
+      animation: slowFloat 6s ease-in-out infinite;
+    }
+    @keyframes slowFloat {
+      0%{ transform: translateY(0) rotate(-3deg); }
+      50%{ transform: translateY(-14px) rotate(3deg); }
+      100%{ transform: translateY(0) rotate(-3deg); }
+    }
+
+    /* scroll arrow */
+    .scroll-arrow {
+      position:absolute;
+      bottom:28px;
+      left:50%;
+      transform:translateX(-50%);
+      z-index:8;
+      display:flex;
+      align-items:center;
+      gap:8px;
+      color:rgba(255,255,255,0.85);
+      cursor:pointer;
+      animation: bounceDown 2s infinite;
+    }
+    @keyframes bounceDown {
+      0%,100%{ transform: translate(-50%,0); opacity:1; }
+      50%{ transform: translate(-50%,10px); opacity:.8; }
+    }
+    .arrow-dot { width:10px;height:10px;border-radius:999px;background:linear-gradient(90deg,var(--accent1),var(--accent2)); box-shadow:0 6px 18px rgba(86,255,71,0.2); }
+
+    /* responsive tweaks */
+    @media (max-width: 1024px){
+      .dumbbell{ width:160px; right:4%; top:30%; }
+      .hero { min-height: 720px; }
+    }
+    @media (max-width:640px){
+      .hero { min-height:470px; }
+      .dumbbell{ display:none; } 
+    }
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.neon {
+  text-shadow: 0 0 20px rgba(150,255,120,0.5);
+}
