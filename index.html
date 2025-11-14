@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BeFit — Modern Gym</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./js/script.js" defer></script>
+  <link rel="styleSheet" href="./css/style.css">
+ 
+</head>
+<body class="bg-[#0d1623] text-gray-200 font-sans leading-relaxed">
+  <!-- NAVBAR -->
+  <nav class="fixed w-full z-40 bg-opacity-40 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-md bg-gradient-to-br from-lime-400 to-green-600 flex items-center justify-center font-bold text-[#04263a]">BF</div>
+        <span class="font-semibold text-lg">BeFit</span>
+      </div>
+      <ul class="hidden md:flex gap-6 text-sm items-center text-gray-300">
+        <li><a href="#home" class="hover:text-lime-400">Home</a></li>
+        <li><a href="#services" class="hover:text-lime-400">Services</a></li>
+        <li><a href="#shop" class="hover:text-lime-400">Shop</a></li>
+        <li><a href="#schedule" class="hover:text-lime-400">Schedule</a></li>
+        <li><a href="#clients" class="hover:text-lime-400">Clients</a></li>
+        <li><a href="#contact" class="hover:text-lime-400">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-3">
+        <button id="cartToggle" class="px-3 py-2 rounded-md bg-[#091123] border border-gray-700 hover:bg-[#0b1a2a]">Cart (<span id="cartCount">0</span>)</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO with wave -->
+  <header id="home" class="pt-24 relative">
+    <div class="max-w-7xl mx-auto px-6 flex items-center gap-8">
+      <div class="w-2/3">
+        <h1 class="text-6xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-green-600 neon-text">FITNESS</h1>
+        <p class="mt-6 text-gray-300 max-w-xl">Push your limits with BeFit. Expert trainers, modern equipment and programs that actually work. Start your journey today.</p>
+        <div class="mt-6 flex gap-4">
+          <button class="px-6 py-3 rounded-md bg-gradient-to-r from-lime-400 to-green-600 text-[#04263a] font-semibold">Join Now</button>
+          <button class="px-6 py-3 rounded-md border border-gray-700 text-gray-300">Learn More</button>
+        </div>
+      </div>
+      <div class="w-1/3 hidden md:block">
+        <img src="./Assets/Images/banner.jpg" alt="gym" class="rounded-xl shadow-lg neon-border" />
+      </div>
+    </div>
+
+    <!-- Wave SVG -->
+    <!-- <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none pointer-events-none">
+      <svg class="relative block w-full h-40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1200 120">
+        <path d="M321.39 56.44c58-10.79 114.16-30.13 172-41.86 82.39-16.72 168.19-17.73 250.45-.39C823.78 31 906.67 72 985.66 92.83c70.05 18.47 146.53 26.09 214.34 3.76V0H0v27.35A600.21 600.21 0 00321.39 56.44z" fill="#bef264"></path>
+      </svg>
+    </div> -->
+  </header>
+
+  <!-- STATS -->
+  <section class="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10">
+    <div>
+      <h2 class="text-3xl font-bold text-lime-400">Your Fitness Journey Starts Here</h2>
+      <p class="text-gray-300 mt-3 max-w-2xl">Personalized training, nutritional guidance and community support to reach your goals faster and safely.</p>
+      <div class="mt-6 grid grid-cols-2 gap-4">
+        <div class="bg-[#0f1a2a] p-6 rounded-xl neon-border text-center card-hover transition">
+          <div class="text-lime-400 font-bold text-2xl">10+</div>
+          <div class="text-gray-300">Certified Trainers</div>
+        </div>
+        <div class="bg-[#0f1a2a] p-6 rounded-xl neon-border text-center card-hover transition">
+          <div class="text-lime-400 font-bold text-2xl">1000+</div>
+          <div class="text-gray-300">Active Members</div>
+        </div>
+        <div class="bg-[#0f1a2a] p-6 rounded-xl neon-border text-center card-hover transition">
+          <div class="text-lime-400 font-bold text-2xl">10+</div>
+          <div class="text-gray-300">Years Experience</div>
+        </div>
+        <div class="bg-[#0f1a2a] p-6 rounded-xl neon-border text-center card-hover transition">
+          <div class="text-lime-400 font-bold text-2xl">10k+</div>
+          <div class="text-gray-300">Google Reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center justify-center">
+      <img src="./Assets/Images/Trainer.jpg" alt="trainer" class="rounded-xl shadow-lg" />
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="py-12 bg-[#071026]">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl text-center font-bold text-white">Our <span class="text-lime-400">Services</span></h2>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-[#0e1a2b] p-8 rounded-xl neon-border card-hover transition">
+          <div class="text-lime-400 text-3xl mb-4">💪</div>
+          <h3 class="font-semibold text-lg">Personal Training</h3>
+          <p class="text-gray-300 mt-2">One-on-one training plans tailored to your goals.</p>
+          <a href="#contact" class="mt-4 inline-block text-lime-400">Join Now →</a>
+        </div>
+        <div class="bg-[#0e1a2b] p-8 rounded-xl neon-border card-hover transition">
+          <div class="text-lime-400 text-3xl mb-4">👥</div>
+          <h3 class="font-semibold text-lg">Group Training</h3>
+          <p class="text-gray-300 mt-2">Energetic group sessions to keep you motivated.</p>
+          <a href="#contact" class="mt-4 inline-block text-lime-400">Join Now →</a>
+        </div>
+        <div class="bg-[#0e1a2b] p-8 rounded-xl neon-border card-hover transition">
+          <div class="text-lime-400 text-3xl mb-4">🏃‍♂️</div>
+          <h3 class="font-semibold text-lg">Treadmill</h3>
+          <p class="text-gray-300 mt-2">Cardio equipment and personalized cardio plans.</p>
+          <a href="#contact" class="mt-4 inline-block text-lime-400">Join Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOP -->
+  <section id="shop" class="py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl text-center font-bold text-white mb-6">Our <span class="text-lime-400">Shop</span></h2>
+      <div id="shopGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Product cards injected by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule + Chart -->
+  <section id="schedule" class="py-12 bg-[#071026]">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl text-center font-bold text-white mb-6">Weekly Gym <span class="text-lime-400">Schedule</span></h2>
+     
+        <div class="overflow-auto rounded-xl neon-border bg-[#0e1a2b] p-4">
+          <table class="w-full text-left text-gray-300 table-auto">
+             <thead>
+    <tr class="bg-gray-900 text-lime-400 px-2">
+      <th class="py-3 px-2">Monday</th>
+      <th class="py-3 px-2">Tuesday</th>
+      <th class="py-3 px-2">Wednesday</th>
+      <th class="py-3 px-2">Thursday</th>
+      <th class="py-3 px-2">Friday</th>
+      <th class="py-3 px-2">Saturday</th>
+      <th class="py-3 px-2">Sunday</th>
+    </tr>
+  </thead>
+
+  <tbody class="bg-gray-800 text-gray-300">
+
+    <!-- Row 1 -->
+    <tr>
+      <td class="py-2 px-2">Bench Press</td>
+      <td class="py-2 px-2">Pull-Ups</td>
+      <td class="py-2 px-2">Squats</td>
+      <td class="py-2 px-2">Jogging</td>
+      <td class="py-2 px-2">Pull-Ups</td>
+      <td class="py-2 px-2">Battle Ropes</td>
+      <td rowspan="5" class="py-2 px-2 text-center align-middle">Rest Day</td>
+
+    </tr>
+
+    <!-- Row 2 -->
+    <tr>
+      <td class="py-2 px-2">Incline Press</td>
+      <td class="py-2 px-2">Barbell Row</td>
+      <td class="py-2 px-2">Deadlift</td>
+      <td class="py-2 px-2">Stretching</td>
+      <td class="py-2 px-2">Bench Press</td>
+      <td class="py-2 px-2">Kettlebell</td>
+    
+    </tr>
+
+    <!-- Row 3 -->
+    <tr>
+      <td class="py-2 px-2">Shoulder Press</td>
+      <td class="py-2 px-2">Cable Row</td>
+      <td class="py-2 px-2">Leg Press</td>
+      <td class="py-2 px-2">Foam Roll</td>
+      <td class="py-2 px-2">Barbell Row</td>
+      <td class="py-2 px-2">Jump Rope</td>
+    
+    </tr>
+
+    <!-- Row 4 -->
+    <tr>
+      <td class="py-2 px-2">Side Raises</td>
+      <td class="py-2 px-2">Bicep Curls</td>
+      <td class="py-2 px-2">Lunges</td>
+      <td class="py-2 px-2">Body Squats</td>
+      <td class="py-2 px-2">Dumbbell</td>
+      <td class="py-2 px-2">Burpees</td>
+      
+    </tr>
+
+    <!-- Row 5 -->
+    <tr>
+      <td class="py-2 px-2">Tricep Dips</td>
+      <td class="py-2 px-2">Hammer Curls</td>
+      <td class="py-2 px-2">Leg Curl</td>
+      <td class="py-2 px-2">Push-Ups</td>
+      <td class="py-2 px-2">Curl + Dips</td>
+      <td class="py-2 px-2">Plank</td>
+      
+    </tr>
+
+  </tbody>
+          </table>
+        </div>
+
+      
+     
+    </div>
+  </section>
+
+  <!-- HAPPY CLIENTS -->
+  <section id="clients" class="py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 class="text-3xl text-center font-bold text-white mb-6">Happy <span class="text-lime-400">Clients</span></h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 bg-[#0e1a2b] rounded-xl neon-border">“Best gym experience — transformed my life!”<div class="mt-3 text-sm text-gray-300">— Priya K.</div></div>
+        <div class="p-6 bg-[#0e1a2b] rounded-xl neon-border">“Amazing trainers and great community.”<div class="mt-3 text-sm text-gray-300">— Rohit S.</div></div>
+        <div class="p-6 bg-[#0e1a2b] rounded-xl neon-border">“Clean, modern, and motivating.”<div class="mt-3 text-sm text-gray-300">— Anjali M.</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-12 bg-[#071026]">
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 class="text-3xl text-center font-bold text-white mb-6">Contact <span class="text-lime-400">Us</span></h2>
+      <form id="contactForm" class="grid gap-4">
+        <input required type="text" id="name" placeholder="Your name" class="p-3 rounded bg-[#081326] border border-gray-700" />
+        <input required type="email" id="email" placeholder="Your email" class="p-3 rounded bg-[#081326] border border-gray-700" />
+        <textarea required id="message" rows="4" placeholder="Message" class="p-3 rounded bg-[#081326] border border-gray-700"></textarea>
+        <div class="flex justify-between items-center">
+          <button type="submit" class="px-6 py-2 rounded bg-lime-400 text-[#04263a] font-semibold">Send Message</button>
+          <div id="contactStatus" class="text-sm text-gray-300"></div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- CART DRAWER -->
+  <aside id="cartDrawer" class="fixed right-[-244px] top-28 w-80 bg-[#081326] rounded-xl p-4 neon-border shadow-lg transform translate-x-40 transition-all">
+    <div class="flex justify-between items-center mb-4">
+      <strong>Cart</strong>
+      <button id="closeCart" class="text-sm text-gray-300">Close</button>
+    </div>
+    <div id="cartItems" class="space-y-3 text-gray-300"></div>
+    <div class="mt-4 border-t border-gray-700 pt-3">
+      <div class="flex justify-between"><span>Subtotal</span><span id="cartSubtotal">₹0</span></div>
+      <button id="checkoutBtn" class="mt-3 w-full px-4 py-2 rounded bg-lime-400 text-[#04263a] font-semibold">Checkout</button>
+    </div>
+  </aside>
+
+  <footer class="py-8 text-center text-gray-400">© BeFit • Modern Gym UI</footer>
+
+
+</body>
+</html>
